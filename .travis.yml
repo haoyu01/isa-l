@@ -71,6 +71,11 @@ matrix:
       arch: arm64
       env: TEST_TYPE=ext
 
+    - os: linux
+      dist: focal
+      arch: ppc64le
+      env: TEST_TYPE=all
+
     ### linux extended tests
     - dist: xenial
       addons:
