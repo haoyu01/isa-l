@@ -39,6 +39,23 @@ matrix:
             - clang-4.0
       env: C_COMPILER=clang-4.0
 
+    ### linux clang-10
+    - dist: focal
+      addons:
+        apt:
+          packages:
+            - clang-10
+      env: C_COMPILER=clang-10
+
+    ### linux clang-10
+    - dist: focal
+      addons:
+        apt:
+          packages:
+            - clang-10
+      env: C_COMPILER=clang-10
+        TEST_TYPE=ext
+
     ### linux older gcc
     - dist: trusty
       addons:
@@ -70,6 +87,25 @@ matrix:
       dist: xenial
       arch: arm64
       env: TEST_TYPE=ext
+
+    ### linux clang-10 arm64
+    - os: linux
+      dist: focal
+      addons:
+        apt:
+          packages:
+            - clang-10
+      env: C_COMPILER=clang-10
+
+    ### linux clang-10 arm64
+    - os: linux
+      dist: focal
+      addons:
+        apt:
+          packages:
+            - clang-10
+      env: C_COMPILER=clang-10
+        TEST_TYPE=ext
 
     ### linux extended tests
     - dist: xenial
